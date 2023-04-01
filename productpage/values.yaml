@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/go-bookinfo/productpage
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "sha-5559b6b"
+  tag: "sha-40ee1d4"
 
 imagePullSecrets: []
 nameOverride: ""

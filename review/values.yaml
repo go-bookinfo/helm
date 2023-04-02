@@ -13,7 +13,7 @@ image:
     repository: ghcr.io/go-bookinfo/review-v2
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "sha-2a2d617"
+    tag: "sha-56baad7"
   v3:
     repository: ghcr.io/go-bookinfo/review-v3
     pullPolicy: IfNotPresent

@@ -5,10 +5,22 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/go-bookinfo/review
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "sha-3bc8135"
+  v1:
+    repository: ghcr.io/go-bookinfo/review-v1
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "sha-3bc8135"
+  v2:
+    repository: ghcr.io/go-bookinfo/review-v2
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "sha-3bc8135"
+  v3:
+    repository: ghcr.io/go-bookinfo/review-v3
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "sha-3bc8135"
+    
 
 imagePullSecrets: []
 nameOverride: ""

@@ -4,6 +4,8 @@ metadata:
   name: {{ include "review.fullname" . }}-v2
   labels:
     {{- include "review.labels" . | nindent 4 }}
+    app: {{ .Release.Name }}
+    version: v2
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -11,8 +13,6 @@ spec:
   selector:
     matchLabels:
       {{- include "review.selectorLabels" . | nindent 6 }}
-      app: {{ .Release.Name }}
-      version: v2
   template:
     metadata:
       {{- with .Values.podAnnotations }}

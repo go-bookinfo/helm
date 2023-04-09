@@ -4,8 +4,6 @@ metadata:
   name: {{ include "review.fullname" . }}-v1
   labels:
     {{- include "review.labels" . | nindent 4 }}
-    app: {{ .Release.Name }}
-    version: v1
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -21,6 +19,8 @@ spec:
       {{- end }}
       labels:
         {{- include "review.selectorLabels" . | nindent 8 }}
+        app: {{ .Release.Name }}
+        version: v1
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

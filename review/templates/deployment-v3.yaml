@@ -4,6 +4,8 @@ metadata:
   name: {{ include "review.fullname" . }}-v3
   labels:
     {{- include "review.labels" . | nindent 4 }}
+    app: {{ .Release.Name }}
+    version: v3
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}

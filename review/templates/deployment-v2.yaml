@@ -11,6 +11,8 @@ spec:
   selector:
     matchLabels:
       {{- include "review.selectorLabels" . | nindent 6 }}
+      app: {{ .Release.Name }}
+      version: v2
   template:
     metadata:
       {{- with .Values.podAnnotations }}
